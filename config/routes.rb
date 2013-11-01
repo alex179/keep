@@ -1,4 +1,6 @@
 Keep::Application.routes.draw do
+  resources :people
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,7 +57,7 @@ Keep::Application.routes.draw do
   #   end
 
   #  dev
-
+  root :to => "welcome#hello"
   get "welcome/hello" => "welcome#hello"
 
 end
